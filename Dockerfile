@@ -15,6 +15,7 @@ RUN yum install -y nginx which supervisor wget telnet git vim make gcc-c++ pcre 
 # 配置守护进程
 RUN echo_supervisord_conf > /etc/supervisor.conf
 ADD config/supervisor/nginx.ini /etc/supervisord.d
+ADD config/supervisor/crontab.ini /etc/supervisord.d
 
 # 常用命令
 ADD config/bashrc /root/.bashrc
