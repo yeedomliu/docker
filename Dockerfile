@@ -10,7 +10,7 @@ RUN mkdir -p /data/logs /data/code/website
 RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 RUN yum -y update
-RUN yum install -y nginx which supervisor wget telnet git vim make gcc-c++ pcre pcre-devel zlib libssl-dev zlib-devel net-tools psmisc kill
+RUN yum install -y nginx which supervisor wget telnet git vim make gcc-c++ pcre pcre-devel zlib libssl-dev zlib-devel net-tools psmisc kill mlocate
 
 # 配置守护进程
 RUN echo_supervisord_conf > /etc/supervisor.conf
